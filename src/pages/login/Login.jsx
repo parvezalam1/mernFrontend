@@ -16,11 +16,10 @@ const loginHandler=async(e)=>{
     setInputError(false)
     dispatch({type:"LOGIN_START"});
     try{
-      // let res=await axios.post('https://mernbackend-hatq.onrender.com/auth/login',{
-      //   username:userRef.current.value,
-      //   password:passwordRef.current.value
-      // });
-      let res=await axios.get('https://mernbackend-hatq.onrender.com/auth/cat');
+      let res=await axios.post('https://mernbackend-hatq.onrender.com/auth/login',{
+        username:userRef.current.value,
+        password:passwordRef.current.value
+      });
       setUp('')
       console.log(res.data)
       setSuccess(true);
