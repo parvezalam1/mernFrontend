@@ -1,0 +1,84 @@
+.login{
+    width: 100%;
+    height: calc(100vh - 55px);
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    align-items: center;
+    flex-direction: column;
+    background:linear-gradient(
+        rgba(255,255,255,0.5),
+        rgba(255,255,255,0.5),
+        rgba(255,255,255,0.5)
+    ), url('https://t4.ftcdn.net/jpg/04/60/71/01/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg') no-repeat;
+    background-size: cover;
+    }
+    .login .registerAccount{
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        width: 100px;
+        border-radius: 10px;
+        background-color:greenyellow;
+        color:crimson;
+        padding: 7px;
+       font-size: 22px;
+    
+    }
+    .loginForm{
+        width: 30%;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 15px white,
+    10px 10px 10px 5px black;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    }
+    .loginForm .formTitle{
+        font-size: 30px;
+        padding: 10px;
+        font-weight: 500px;
+        color: darkgrey;
+        text-shadow: 1px 1px 1px red,
+        -1px -1px white;
+    }
+    .loginForm input{
+        width: 77%;
+        height: 30px;
+        border: 0.5px solid black;
+        border-radius: 10px;
+        margin-top: 10px;
+        text-align: center;
+        padding: 3px;
+        font-size: 20px;
+    
+    }
+    .loginForm button{
+        width: 120px;
+        height: 35px;
+        margin-top: 15px;
+        font-size: 20px;
+        border-radius: 10px;
+        font-weight: 700px;
+        color: white;
+        background-color: black;
+        cursor: pointer;
+    }
+    .loginForm button:disabled{
+        cursor: not-allowed;
+        background-color: gainsboro;
+        color: rgba(0,0,0,0.5);
+    }
+
+    
+/* media query */
+@media only screen and (min-width:320px) and (max-width:920px){
+    .loginForm{
+        width: 95%;
+        border-radius: 5px;
+    }
+}

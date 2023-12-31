@@ -1,0 +1,94 @@
+.post{
+    width: 470px;
+    display: flex;
+    /* height: 450px; */
+    justify-content:flex-start;
+    align-items:flex-start;
+    /* flex-direction: column; */
+    padding: 10px 3px;
+    margin: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /* background-color: chocolate; */
+}
+
+.post .postItem{
+    width: 100%;
+    height: 470px;
+    padding: 10px 3px;
+    margin: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 12px 3px rgba(20,120,110,0.5),
+    -3px -3px 13px 5px rgba(0,0,0,0.5);
+}
+
+.post .postItem .postImage{
+   margin-top: -7px;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.postItem .postCategory{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.postItem .postCategory .postCategoryList{
+    width: 100%;
+    display: flex;
+    margin-top: 1px;
+    padding: 3px 0px;
+    justify-content: center;
+    align-items: center;
+   
+}
+.postItem .postCategory .postCategoryList .postCategoryListItem{
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    margin-left:10px;
+    padding: 5px;
+    list-style: none;
+    font-weight: 700px;
+    letter-spacing: 0.7px;
+}
+.postItem .postTitle{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700px;
+    padding: 3px;
+    text-align: center;
+}
+
+.post .postDescription{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 500px;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    text-align-last: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    font-family: 'Stint Ultra Condensed', serif;
+}
+.post .postTime{
+    display: flex;
+    justify-content: space-around;
+    /* background-color: #022; */
+    color: black;
+    padding: 3px;
+}
+
+@media only screen and (min-width:320px) and (max-width:920px){
+    .post{
+        width: 97%;
+    }
+}

@@ -1,0 +1,158 @@
+.settings{
+ 
+    display: flex;
+  
+    
+}
+.settingsWrapper{
+    flex: 9;
+}
+.settings .settingsWrapper .settingsAction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    padding: 5px;
+}
+.settings .settingsWrapper .settingsAction .updateProfile{
+    font-size: 30px;
+    font-weight: 500px;
+    color: green;
+    font-style: italic;
+    letter-spacing: 0.7px;
+    margin-left: 20px;
+}
+.settings .settingsWrapper .settingsAction .deleteAccount{
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 700px;
+    color:firebrick;
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.3);
+}
+.profilePicture{
+    padding: 10px;
+    margin-top: 5px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    
+}
+.profileText{
+    margin: 30px;
+    color: white;
+    background-color:rgba(0,0,0,0.5);
+    font-weight: 700px;
+    padding: 5px;
+}
+.profilePicture .userPicture{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    margin-top: 10px;
+    object-fit: fill;
+    margin-left: 10px;
+}
+.profilePicture i{
+    font-size: 40px;
+    color: green;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.userForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 50px;
+}
+.userForm input{
+    width: 70%;
+    height: 30px;
+    font-weight: 700px;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 0.7px;
+    word-spacing: 0.5px;
+    padding: 2px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-top: 15px;
+}
+.userForm .caption{
+    background-color: crimson;
+    font-size: 25px;
+    width: 50%;
+    font-weight: 700px;
+    padding: 5px;
+    color: bisque;
+}
+.userForm input:focus{
+    outline:none;
+}
+.userForm label{
+    font-size: 35px;
+    font-weight: 1000px;
+    letter-spacing: 1px;
+    padding: 3px 20px;
+    width: 70%;
+    background-color: rgba(0,0,0,0.5);
+    color: lightgreen;
+    margin-top: 10px;
+}
+.userForm button{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    border-radius: 5px;
+    background-color:black;
+    color:greenyellow;
+    padding: 3px 0px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.userForm button:disabled{
+    background-color: silver;
+    cursor: not-allowed;
+}
+
+
+
+@media only screen and (min-width:320px) and (max-width:920px){
+    .settings{
+        flex-direction: column;
+    }
+    .settings .settingsWrapper .settingsAction .updateProfile{
+        font-size: 20px;
+        font-weight: 300px;
+        margin-left: 5px;
+    }
+    .settings .settingsWrapper .settingsAction .deleteAccount{
+        font-size: 15px;
+    }
+    .userForm input{
+        width: 100%;
+    }
+    .userForm .caption{
+        width: 100%;
+        height: 30px;
+        font-size: 15px;
+    }
+    .userForm label{
+        width: 100%;
+        height: 30px;
+        font-size: 15px;
+    }
+    .userForm button{
+        width: 100%;
+        font-size: 25;
+        height: 30px;
+        line-height: 25px;
+        padding: 0px;
+    }
+}

@@ -1,0 +1,219 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: blueviolet;
+}
+body::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: black;
+    border-radius: 3px;
+}
+.header{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 3px 0px;
+}
+.top{
+    width: 100%;
+    height: 70px;
+    background-color:rgb(85, 56, 70);
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 777;
+    font-family: 'Lora', serif;
+    color: #fff;
+}
+.topleft,.topright{
+    flex:3;
+    margin-left: 20px;
+}
+.topleft i{
+    margin-left: 20px;
+    font-size: 30px;
+   border-radius: 50%;
+   color: #fff;
+    cursor: pointer;
+}
+.topcenter .ulitem{
+    margin-top: 15px;
+    display: flex;
+}
+.topcenter .ulitem li{
+    list-style: none;
+    font-size: 20px;
+    font-weight: 200;
+    color: white;
+    margin-left: 15px;
+    background-color: darkgray;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 20px;
+    font-family: 'Lora', serif;
+}
+
+.topcenter .ulitem li .link{
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 20px;
+}
+.topcenter .ulitem li.link{
+    background-color:crimson;
+    color:snow;
+}
+.topright{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.ulitem i{
+    display: none;
+}
+.topright .fa-bars{
+    display: none;
+}
+.topright .ulitem li{
+    float: left;
+    list-style: none;
+    margin-right: 20px;
+    margin-top: 15px;
+  
+}
+.topright .ulitem li .link{
+    padding: 5px;
+    text-decoration: none;
+    border: 1.5px solid #222;
+      
+    background-color: black;
+    color: #fff;
+}
+.topright img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.topright .topsearch,.fa-searchengin{
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    order: 1;
+}
+.fa-searchengin{
+    display: none;
+}
+input[type='search']{
+    width: 250px;
+    height: 30px;
+    font-weight: 700px;
+    font-size: 20px;
+    text-align: center;
+    transition: all 0.5s;
+    order: 1;
+    background-color: rgba(192, 178, 184,1);
+    border-radius: 5px;
+    border: none;
+    color:crimson;
+}
+input[type='search']:focus{
+    outline: none;
+}
+
+
+/* media query fire */
+
+@media only screen and (min-width:320px) and (max-width:920px){
+ 
+    .topleft{
+        flex: 6;
+        margin-left: 0px;
+    }
+    .topright{
+        flex: 6;
+        margin-right: 0px;
+    }
+    .topleft i{
+        margin-left: 20px;
+        font-size: 30px;
+       border-radius: 50%;
+        cursor: pointer;
+    }
+    .topcenter{
+        flex:none;
+      
+    }
+    .ulitem i{
+        display: block;
+    }
+    .topright .fa-bars{
+        display: block;
+        order: 2;
+    }
+    .topcenter .ulitem{
+        height: 100vh;
+        position: absolute;
+        top: -20px;
+        right: 0px;
+        /* width: 300px; */
+        display: none;
+        width: 50%;
+        flex-direction: column;
+        background-color: #c59393;
+    }
+    .ulitem i{
+        position:absolute;
+        right: 10px;
+        top: 5px;
+        color:white;
+        cursor: pointer;
+        font-size: 25px;
+    }
+    .topcenter .ulitem li{
+        position: relative;
+        top: 25px;
+        left: -30px;
+        border-bottom: 1px solid white;
+        border-radius: 0px;
+        margin-top: 7px;
+        color:white;
+        background-color: rgb(136, 199, 160);
+    }
+    .topright{
+        flex: none;
+    }
+
+    .topright .ulitem li{
+        margin-right: 3px;
+        font-size: 15px;
+    }
+    .topright .ulitem li .link{
+       
+    }
+    .topright i{
+margin-right: 5px;
+font-size: 30px;
+color: #fff;
+cursor: pointer;
+    }  
+    .topright .topsearch,.fa-searchengin{
+        margin-right: 10px;
+    }
+
+    input[type='search']{
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        width: 100%;
+        height: 50px;
+       
+    }
+}

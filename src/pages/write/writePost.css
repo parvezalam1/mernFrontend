@@ -1,0 +1,116 @@
+.writePost{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.writePost .writePostImage{
+    width: 70%;
+    height: 300px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.writePost .frm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.writePost .wrapper{
+    width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 30px;
+}
+.writePost .wrapper label{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius:50%;
+    margin-left: 70px;
+}
+.wrapper label i{
+    font-size: 30px;
+}
+.writePost .wrapper .titleTag,.postStory:focus{
+    outline: none;
+}
+.writePost .writePostDes .postStory:focus{
+    outline: none;
+}
+.writePost .wrapper .titleTag{
+    width: 77%;
+    height: 30px;
+    font-size: 30px;
+    font-weight: 700px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 3px;
+    border: none;
+    /* border-bottom: 2px solid black; */
+    margin-left: 25px;
+}
+.writePost .wrapper .postPublish{
+    background-color: dodgerblue;
+    padding: 5px;
+    font-size: 22px;
+    color: white;
+    font-weight: 500px;
+    border-radius: 5px;
+   cursor: pointer;
+}
+.writePost .wrapper .postPublish:disabled{
+    background-color: slategrey;
+    cursor: not-allowed;
+}
+.writePost .writePostDes{
+    width: 77%;
+}
+.writePost .writePostDes textarea{
+    width: 100%;
+    height: 300px;
+    padding: 30px 10px;
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 700px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    /* border-radius: 5px; */
+    /* border: 3px solid black; */
+}
+
+@media only screen and (min-width:320px) and (max-width:920px){
+    .writePost{
+        position: relative;
+    }
+    .writePost .writePostImage{
+        width: 95%;
+        height: 200px;
+        border-radius: 5px;
+        margin: 5px;
+    }
+   
+    .writePost .wrapper label{
+        margin-left: 0px;
+    }
+    .writePost .wrapper .titleTag{
+        width: 95%;
+        font-size: 20px;
+    
+        margin-left: 7px;
+    }
+    .writePost .wrapper .postPublish{
+    position:absolute;
+    width: 95%;
+    bottom: -30px;
+left: 2.5%;
+    }
+
+    .writePost .writePostDes textarea{
+        height: 170px;
+    }
+}

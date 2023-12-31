@@ -1,0 +1,110 @@
+.sidebar{
+   flex: 3;
+   height: 700px;
+ padding-bottom: 20px;
+    border-radius: 5px;
+    background-color:darkcyan;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.sidebar .sidebarItem{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sidebar .sidebarItem .sidebarTitle{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500px;
+    margin-top: 5px;
+    width: 77%;
+    padding: 3px 0px;
+    word-spacing: 3px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    /* background-color: rgba(0,0,0,0.3); */
+    color: white;
+    text-shadow: 1px 1px 1px red,
+    1.5px 1.5px 2px red,
+    1px 1px 1px black,
+    1.7px 1.5px 2px black;
+}
+.sidebar .sidebarItem .sidebarImage{
+    margin-top: 15px;
+    width: 100%;
+    height: 250px;
+}
+.sidebar .sidebarItem p{
+    margin-left: 10px;
+    padding: 3px;
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    word-spacing: 0.7px;
+}
+.sidebar .sidebarItem .ulList{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+}
+.sidebar .sidebarItem  .ulItem{
+    width: 40%;
+ list-style: none;
+ margin-left: 5px;
+text-align: center;
+margin-top: 15px;
+background-color: #0222;
+padding: 5px 0px;
+cursor: pointer;
+
+}
+.sidebar .sidebarSocial{
+    display: flex;
+    justify-content: center;
+
+}
+.sidebar .sidebarSocial i{
+    font-size: 30px;
+  border-radius: 5px;
+  margin: 7px 5px;
+    
+}
+
+/* media query */
+@media only screen and (min-width:320px) and (max-width:920px){
+    .sidebar{
+        width: 100%;
+        height: 50%;
+        flex: none;
+         border-radius: 0px;
+     }
+     .sidebar .sidebarItem .sidebarTitle{
+        position: relative;
+        top: 0px;
+     }
+     .sidebar .sidebarItem .sidebarImage{
+        margin-top: 22px;
+        height: 200px;
+    }
+    .sidebar .sidebarItem p{
+        text-align: center;
+        margin-left: 10px;
+    }
+    .sidebar .sidebarSocial{
+        display: flex;
+        justify-content: center;
+    margin-top: 30px;
+    }
+    .sidebar .sidebarSocial i{
+        font-size: 30px;
+      border-radius: 5px;
+      margin: 0px 5px;
+        
+    }
+}
