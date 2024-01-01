@@ -16,10 +16,11 @@ const loginHandler=async(e)=>{
     setInputError(false)
     dispatch({type:"LOGIN_START"});
     try{
-      let res=await axios.post('https://mernbackend-h4ns.onrender.com/routes/auth/login',{
-        username:userRef.current.value,
-        password:passwordRef.current.value
-      });
+      // let res=await axios.post('https://mernbackend-h4ns.onrender.com/',{
+      //   username:userRef.current.value,
+      //   password:passwordRef.current.value
+      // });
+      let res=await axios.post('https://mernbackend-h4ns.onrender.com/api/category');
       setUp('')
       console.log(res.data)
       setSuccess(true);
