@@ -40,5 +40,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy":"https://mernbackend-hatq.onrender.com/"
+  "BASE_URL":"https://mernbackend-hatq.onrender.com/"
 }
