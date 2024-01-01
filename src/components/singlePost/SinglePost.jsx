@@ -70,7 +70,7 @@ const updatePostSumbit=async(e)=>{
     let res=await axios.put(`https://mernbackend-hatq.onrender.com/posts/${getPost._id}`,updateUserPost);
     setUpdateMessage(res.data);
     if(res.data==='post update successfully'){
-      await axios.post('/upload',data);
+      await axios.post('https://mernbackend-hatq.onrender.com/upload',data);
       setTimeout(() => {
         window.location.reload()
       }, 2000);

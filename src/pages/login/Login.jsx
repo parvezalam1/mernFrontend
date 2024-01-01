@@ -10,44 +10,33 @@ export default function Login() {
   let [successs,setSuccess]=useState(false);
   let userRef=useRef();
   let passwordRef=useRef();
-// const loginHandler=async(e)=>{
-//   e.preventDefault();
-//   if(userRef.current.value!=='' && passwordRef.current.value!==''){
-//     setInputError(false)
-//     dispatch({type:"LOGIN_START"});
-//     try{
-//       // let res=await axios.post('https://mernbackend-h4ns.onrender.com/',{
-//       //   username:userRef.current.value,
-//       //   password:passwordRef.current.value
-//       // });
-//       let res=await axios.get('https://mernbackend-h4ns.onrender.com/api/category');
-//       setUp('')
-//       console.log(res.data)
-//       setSuccess(true);
-//       setTimeout(()=>{
-
-//         dispatch({type:"LOGIN_SUCCESS",user:res.data})
-//       },2000)
-//     }catch(err){
-//       dispatch({type:"LOGIN_FAILURE"})
-//       setUp('username or password incurrect')
-//     }
-
-//   }else{
-//     setInputError(true)
-//   }
-// }
 const loginHandler=async(e)=>{
   e.preventDefault();
-let res=await fetch('https://mernbackend-h4ns.onrender.com/api/category',{
-  method:'GET',
-  headers:{
-    'Content-Type':'application/json',
-  },
-});
-const da=await res.json();
-console.log(da)
+  if(userRef.current.value!=='' && passwordRef.current.value!==''){
+    setInputError(false)
+    dispatch({type:"LOGIN_START"});
+    try{
+      let res=await axios.post('https://mernbackend-h4ns.onrender.com/auth/login',{
+        username:userRef.current.value,
+        password:passwordRef.current.value
+      });
+      setUp('')
+      console.log(res.data)
+      setSuccess(true);
+      setTimeout(()=>{
+
+        dispatch({type:"LOGIN_SUCCESS",user:res.data})
+      },2000)
+    }catch(err){
+      dispatch({type:"LOGIN_FAILURE"})
+      setUp('username or password incurrect')
+    }
+
+  }else{
+    setInputError(true)
+  }
 }
+
   return (
     <div className='login'>
           <button className='registerAccount'><Link className='link' to='/register'>Register</Link></button>

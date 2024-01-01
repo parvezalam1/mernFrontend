@@ -16,7 +16,7 @@ export default function Post({post}) {
           </ul>
         </div>
         <div className="postTitle">
-          <Link to={`/post/${post._id}`} className='link'>
+          <Link to={`https://mernbackend-hatq.onrender.com/post/${post._id}`} className='link'>
           <b>{post.title}</b>
           </Link>
         </div>
