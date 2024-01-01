@@ -39,7 +39,7 @@ export default function Login() {
 // }
 const loginHandler=async(e)=>{
   e.preventDefault();
-let res=await axios.get('https://mernbackend-h4ns.onrender.com/api/category');
+let res=await fetch('https://mernbackend-h4ns.onrender.com/api/category');
 console.log(res.data)
 }
   return (
