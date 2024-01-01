@@ -10,32 +10,37 @@ export default function Login() {
   let [successs,setSuccess]=useState(false);
   let userRef=useRef();
   let passwordRef=useRef();
+// const loginHandler=async(e)=>{
+//   e.preventDefault();
+//   if(userRef.current.value!=='' && passwordRef.current.value!==''){
+//     setInputError(false)
+//     dispatch({type:"LOGIN_START"});
+//     try{
+//       // let res=await axios.post('https://mernbackend-h4ns.onrender.com/',{
+//       //   username:userRef.current.value,
+//       //   password:passwordRef.current.value
+//       // });
+//       let res=await axios.get('https://mernbackend-h4ns.onrender.com/api/category');
+//       setUp('')
+//       console.log(res.data)
+//       setSuccess(true);
+//       setTimeout(()=>{
+
+//         dispatch({type:"LOGIN_SUCCESS",user:res.data})
+//       },2000)
+//     }catch(err){
+//       dispatch({type:"LOGIN_FAILURE"})
+//       setUp('username or password incurrect')
+//     }
+
+//   }else{
+//     setInputError(true)
+//   }
+// }
 const loginHandler=async(e)=>{
   e.preventDefault();
-  if(userRef.current.value!=='' && passwordRef.current.value!==''){
-    setInputError(false)
-    dispatch({type:"LOGIN_START"});
-    try{
-      // let res=await axios.post('https://mernbackend-h4ns.onrender.com/',{
-      //   username:userRef.current.value,
-      //   password:passwordRef.current.value
-      // });
-      let res=await axios.get('https://mernbackend-h4ns.onrender.com/api/category');
-      setUp('')
-      console.log(res.data)
-      setSuccess(true);
-      setTimeout(()=>{
-
-        dispatch({type:"LOGIN_SUCCESS",user:res.data})
-      },2000)
-    }catch(err){
-      dispatch({type:"LOGIN_FAILURE"})
-      setUp('username or password incurrect')
-    }
-
-  }else{
-    setInputError(true)
-  }
+let res=await axios.get('https://mernbackend-h4ns.onrender.com/api/category');
+console.log(res.data)
 }
   return (
     <div className='login'>
