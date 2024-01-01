@@ -20,7 +20,7 @@ const loginHandler=async(e)=>{
       //   username:userRef.current.value,
       //   password:passwordRef.current.value
       // });
-      let res=await axios.post('https://mernbackend-h4ns.onrender.com/api/category');
+      let res=await axios.get('https://mernbackend-h4ns.onrender.com/api/category');
       setUp('')
       console.log(res.data)
       setSuccess(true);
