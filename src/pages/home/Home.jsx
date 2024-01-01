@@ -39,7 +39,7 @@ let tempArray=[];
   useMemo(() => {
     const fetchPosts = async () => {
       let res = [];
-      location.state !== null ? res = await axios.post('/posts/title', { title: location.state }) : res = await axios.post(`/posts/pa`, { offset: offset });
+      location.state !== null ? res = await axios.post('/posts/title', { title: location.state }) : res = await axios.post(`https://mernbackend-h4ns.onrender.com/routes/posts/pa`, { offset: offset });
       res.data.length === 0 ? setMessage(true) : setMessage(false);
       res.data.length === 2 ? setPosts(res.data[0]) : setPosts(res.data);
        setTemp(res.data[1])
