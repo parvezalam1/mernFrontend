@@ -39,8 +39,14 @@ export default function Login() {
 // }
 const loginHandler=async(e)=>{
   e.preventDefault();
-let res=await fetch('https://mernbackend-h4ns.onrender.com/api/category');
-console.log(res.data)
+let res=await fetch('https://mernbackend-h4ns.onrender.com/api/category',{
+  method:'GET',
+  headers:{
+    'Content-Type':'application/json',
+  },
+});
+const da=await res.json();
+console.log(da)
 }
   return (
     <div className='login'>
