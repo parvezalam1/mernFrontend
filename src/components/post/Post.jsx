@@ -1,11 +1,12 @@
 import './post.css';
 import {Link} from 'react-router-dom'
 export default function Post({post}) {
-  let path="https://mernbackend-hatq.onrender.com/images/";
-  let path2="https://mernbackend-hatq.onrender.com/mernBackend/images/";
+  let path="http://localhost:5000/images/";
+  let path2="https://mernbackend-hatq.onrender.com/images/";
 
   return (
     <div className='post'>
+      {post.photo}
       <div className="postItem">
         {post.photo &&
       <img  src={path+post.photo} className='postImage' alt="not" />
