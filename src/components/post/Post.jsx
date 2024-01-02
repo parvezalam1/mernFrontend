@@ -1,12 +1,17 @@
 import './post.css';
 import {Link} from 'react-router-dom'
 export default function Post({post}) {
-  let path="https://mernbackend-hatq.onrender.com/mernBackend/images/";
+  let path="https://mernbackend-hatq.onrender.com/images/";
+  let path2="https://mernbackend-hatq.onrender.com/mernBackend/images/";
+
   return (
     <div className='post'>
       <div className="postItem">
         {post.photo &&
       <img  src={path+post.photo} className='postImage' alt="not" />
+      } 
+        {post.photo &&
+      <img  src={path2+post.photo} className='postImage' alt="not" />
       } 
         <div className="postCategory">
           <ul className='postCategoryList'>
@@ -16,7 +21,7 @@ export default function Post({post}) {
           </ul>
         </div>
         <div className="postTitle">
-          <Link to={`https://mernbackend-hatq.onrender.com/mernBackend/post/${post._id}`} className='link'>
+          <Link to={`/post/${post._id}`} className='link'>
           <b>{post.title}</b>
           </Link>
         </div>
