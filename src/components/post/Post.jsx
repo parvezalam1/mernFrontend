@@ -1,7 +1,7 @@
 import './post.css';
 import {Link} from 'react-router-dom'
 export default function Post({post}) {
-  let path="https://mernbackend-hatq.onrender.com/images/";
+  let path="https://mernbackend-hatq.onrender.com/mernBackend/images/";
   return (
     <div className='post'>
       <div className="postItem">
