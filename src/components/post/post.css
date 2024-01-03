@@ -64,7 +64,11 @@
     padding: 3px;
     text-align: center;
 }
-
+.postItem .postTitle:first-letter{
+font-size: 30px;
+color:crimson;
+font-weight: 700;
+}
 .post .postDescription{
     margin: 10px;
     font-size: 20px;
@@ -79,6 +83,11 @@
     -webkit-box-orient:vertical;
     font-family: 'Stint Ultra Condensed', serif;
 }
+ .postDescription:first-letter{
+    font-size: 30px;
+    color:crimson;
+    font-weight: 700;
+    }
 .post .postTime{
     display: flex;
     justify-content: space-around;

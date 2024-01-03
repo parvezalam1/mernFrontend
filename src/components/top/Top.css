@@ -135,14 +135,14 @@ input[type='search']:focus{
  
     .topleft{
         flex: 6;
-        margin-left: 0px;
+        margin-left: -15px;
     }
     .topright{
         flex: 6;
         margin-right: 0px;
     }
     .topleft i{
-        margin-left: 20px;
+        margin-left: 10px;
         font-size: 30px;
        border-radius: 50%;
         cursor: pointer;
@@ -190,13 +190,12 @@ input[type='search']:focus{
     .topright{
         flex: none;
     }
-
+.topright .ulitem{
+    padding: 0px;
+}
     .topright .ulitem li{
         margin-right: 3px;
         font-size: 15px;
-    }
-    .topright .ulitem li .link{
-       
     }
     .topright i{
 margin-right: 5px;
