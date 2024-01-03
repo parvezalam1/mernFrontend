@@ -8,7 +8,7 @@ export default function Sidebar() {
   const [cats,setCasts]=useState([]);
   useEffect(()=>{
 const fetchData=async ()=>{
-  let res=await axios.get('https://mernbackend-h4ns.onrender.com/category');
+  let res=await axios.get('https://mernbackend-h4ns.onrender.com/mernBackend/category');
   setCasts(res.data)
 }
 fetchData()

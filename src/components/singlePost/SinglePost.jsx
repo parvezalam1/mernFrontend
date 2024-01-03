@@ -25,7 +25,7 @@ useEffect(()=>{
   }
   getPost()
 },[path])
-let imagePath="https://mernbackend-h4ns.onrender.com/mernBackend/images/";
+let imagePath="https://mernbackend-h4ns.onrender.com/images/";
 if(getPost.username===user.username){
   imagePath+=getPost.photo
 } 
@@ -70,9 +70,9 @@ const updatePostSumbit=async(e)=>{
     let res=await axios.put(`https://mernbackend-h4ns.onrender.com/mernBackend/posts/${getPost._id}`,updateUserPost);
     setUpdateMessage(res.data);
     if(res.data==='post update successfully'){
-      await axios.post('https://mernbackend-h4ns.onrender.com/mernBackend/upload',data);
+      await axios.post('https://mernbackend-h4ns.onrender.com/upload',data);
       setTimeout(() => {
-        window.location.reload()
+        window.location.replace('/')
       }, 2000);
     }
   }catch(err){
