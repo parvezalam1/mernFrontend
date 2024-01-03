@@ -5,7 +5,6 @@ export default function Post({post}) {
 
   return (
     <div className='post'>
-      {post.photo}
       <div className="postItem">
         {post.photo &&
       <img  src={path+post.photo} className='postImage' alt="not" />
