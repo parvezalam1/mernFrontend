@@ -40,7 +40,7 @@ export default function Settings() {
           updateUser.profilePic = makeNewImagePicture;
         
         }
-        let res = await axios.put(`https://mernbackend-h4ns.onrender.com/users/${user._id}`, updateUser)
+        let res = await axios.put(`https://mernbackend-h4ns.onrender.com/mernBackend/users/${user._id}`, updateUser)
         if(res.data){
 
           try {
