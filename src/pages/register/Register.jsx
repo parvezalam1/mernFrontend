@@ -16,7 +16,7 @@ let  formHandler =async(e)=> {
   if (username!=='' && password!=='' && email!=='') {
     setError(false) 
   try{
-      let res=await axios.post('https://mernbackend-hatq.onrender.com/auth/register',{
+      let res=await axios.post('https://mernbackend-h4ns.onrender.com/auth/register',{
         username,
         password,
         email

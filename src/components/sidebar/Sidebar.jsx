@@ -8,7 +8,7 @@ export default function Sidebar() {
   const [cats,setCasts]=useState([]);
   useEffect(()=>{
 const fetchData=async ()=>{
-  let res=await axios.get('https://mernbackend-hatq.onrender.com/category');
+  let res=await axios.get('https://mernbackend-h4ns.onrender.com/category');
   setCasts(res.data)
 }
 fetchData()
@@ -30,7 +30,7 @@ fetchData()
           {cats.map((c)=>(
 
             <li className='ulItem'>
-              <Link to={`https://mernbackend-hatq.onrender.com/?cat=${c.category}`} className='link'>{c.category}</Link></li>
+              <Link to={`https://mernbackend-h4ns.onrender.com/?cat=${c.category}`} className='link'>{c.category}</Link></li>
           )
           
           )

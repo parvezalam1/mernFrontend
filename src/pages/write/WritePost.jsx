@@ -36,7 +36,7 @@ let {user}=useContext(Context)
         setFileError(false)
                try{
                 setRequestStatus(true)
-           let res= await axios.post('https://mernbackend-hatq.onrender.com/posts',newPost)
+           let res= await axios.post('https://mernbackend-h4ns.onrender.com/posts',newPost)
            console.log(res.data)
            if(res.data==='title_match'){
             setPostUpload(false)
@@ -52,7 +52,7 @@ let {user}=useContext(Context)
             descMatch(false)
             window.location.replace('/post/'+res.data._id)
             try{
-                await axios.post('https://mernbackend-hatq.onrender.com/upload',data);
+                await axios.post('https://mernbackend-h4ns.onrender.com/upload',data);
             }catch(err){}
             
            }

@@ -13,7 +13,7 @@ export default function Header() {
       </div>
 
       <div className="blogimage">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Morning%2C_just_after_sunrise%2C_Namibia.jpg/640px-Morning%2C_just_after_sunrise%2C_Namibia.jpg" alt="" />
+        <img src="https://cdn.pixabay.com/photo/2017/05/30/03/58/blog-2355684_640.jpg" alt="" />
       </div>
 
     </div>

@@ -1,8 +1,7 @@
 import './post.css';
 import {Link} from 'react-router-dom'
 export default function Post({post}) {
-  let path="http://localhost:5000/images/";
-  let path2="https://mernbackend-hatq.onrender.com/images/";
+  let path="https://mernbackend-h4ns.onrender.com/images/";
 
   return (
     <div className='post'>
@@ -10,9 +9,6 @@ export default function Post({post}) {
       <div className="postItem">
         {post.photo &&
       <img  src={path+post.photo} className='postImage' alt="not" />
-      } 
-        {post.photo &&
-      <img  src={path2+post.photo} className='postImage' alt="not" />
       } 
         <div className="postCategory">
           <ul className='postCategoryList'>

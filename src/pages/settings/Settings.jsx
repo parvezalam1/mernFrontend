@@ -11,7 +11,7 @@ export default function Settings() {
   let [message, setMessage] = useState(false);
   let [success, setSuccess] = useState(false)
   let [warning,setWarning]=useState(false)
-  let PF = "https://mernbackend-hatq.onrender.com/userProfile/";
+  let PF = "https://mernbackend-h4ns.onrender.com/userProfile/";
   let { user, dispatch, isFetching } = useContext(Context);
   console.log(user, isFetching)
   const updateUser = async (e) => {
@@ -40,11 +40,11 @@ export default function Settings() {
           updateUser.profilePic = makeNewImagePicture;
         
         }
-        let res = await axios.put(`https://mernbackend-hatq.onrender.com/users/${user._id}`, updateUser)
+        let res = await axios.put(`https://mernbackend-h4ns.onrender.com/users/${user._id}`, updateUser)
         if(res.data){
 
           try {
-            await axios.post('https://mernbackend-hatq.onrender.com/uploadProfile', newProfile)
+            await axios.post('https://mernbackend-h4ns.onrender.com/uploadProfile', newProfile)
           } catch (err) {
             console.log(err)
           }
@@ -69,7 +69,7 @@ const deleteAccount=(e)=>{
    setTimeout(async function(){
 
      if(window.confirm(`do you want to delete your account \n Warning if your delete your account then you loss your all data`)){
-       let res = await axios.delete(`https://mernbackend-hatq.onrender.com/users/${user._id}/${user.username}`)
+       let res = await axios.delete(`https://mernbackend-h4ns.onrender.com/users/${user._id}/${user.username}`)
 
        alert(res.data)
        setWarning(false)
