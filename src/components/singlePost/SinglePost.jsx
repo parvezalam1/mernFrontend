@@ -20,19 +20,19 @@ const location = useLocation();
 let path=location.pathname.split("/")[2];
 useEffect(()=>{
   let getPost=async()=>{
-    let res=await axios.get('https://mernbackend-h4ns.onrender.com/posts/'+path);
+    let res=await axios.get('https://mernbackend-h4ns.onrender.com/mernBackend/posts/'+path);
     setGetPost(res.data)
   }
   getPost()
 },[path])
-let imagePath="https://mernbackend-h4ns.onrender.com/images/";
+let imagePath="https://mernbackend-h4ns.onrender.com/mernBackend/images/";
 if(getPost.username===user.username){
   imagePath+=getPost.photo
 } 
 const singlePostDelHandler=async(delId)=>{
   setDeleteStatus(true)
 try{
-  await axios.delete(`https://mernbackend-h4ns.onrender.com/posts/${delId}`,{data:{username:user.username}});
+  await axios.delete(`https://mernbackend-h4ns.onrender.com/mernBackend/posts/${delId}`,{data:{username:user.username}});
   setDeleteStatus(false)
   alert('user post has been deleted successfully')
   setTimeout(()=>{
@@ -67,10 +67,10 @@ const updatePostSumbit=async(e)=>{
   }
   setUpdateStatus(true)
   try{
-    let res=await axios.put(`https://mernbackend-h4ns.onrender.com/posts/${getPost._id}`,updateUserPost);
+    let res=await axios.put(`https://mernbackend-h4ns.onrender.com/mernBackend/posts/${getPost._id}`,updateUserPost);
     setUpdateMessage(res.data);
     if(res.data==='post update successfully'){
-      await axios.post('https://mernbackend-h4ns.onrender.com/upload',data);
+      await axios.post('https://mernbackend-h4ns.onrender.com/mernBackend/upload',data);
       setTimeout(() => {
         window.location.reload()
       }, 2000);
