@@ -30,6 +30,7 @@ if(getPost.username===user.username){
   imagePath+=getPost.photo
 } 
 const singlePostDelHandler=async(delId)=>{
+  if(window.confirm("do you want to delete this post YES / NO")){
   setDeleteStatus(true)
 try{
   await axios.delete(`https://mernbackend-h4ns.onrender.com/mernBackend/posts/${delId}`,{data:{username:user.username}});
@@ -42,6 +43,7 @@ try{
 }catch(err){
   console.log(err.name)
 }
+  }
 }
 
 function updatePostHandler(){
