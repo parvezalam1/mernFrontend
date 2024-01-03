@@ -44,7 +44,7 @@ export default function Settings() {
         if(res.data){
 
           try {
-            await axios.post('https://mernbackend-h4ns.onrender.com/uploadProfile', newProfile)
+            await axios.post('https://mernbackend-h4ns.onrender.com/mernBackend/uploadProfile', newProfile)
           } catch (err) {
             console.log(err)
           }
