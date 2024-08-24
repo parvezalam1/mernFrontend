@@ -106,15 +106,15 @@ const deleteAccount=(e)=>{
           <caption className='caption'>Enter Your Details</caption>
           <label htmlFor='userName'>userName</label>
           <input type="text" id='userName' placeholder='Enter UserName '
-            onChange={(e) => setUpdateUsername(e.target.value)}
+            onChange={(e) => setUpdateUsername(e.target.value)} required
           />
           <label htmlFor='userEmail'>user Email</label>
           <input type="email" id='userEmail' placeholder='Enter User Email'
-            onChange={(e) => setUpdateUserEmail(e.target.value)}
+            onChange={(e) => setUpdateUserEmail(e.target.value)} required
           />
           <label htmlFor='userPassword'>user Password</label>
-          <input type="password" id='userPassword' placeholder='Enter User Password '
-            onChange={(e) => setUpdateUserPassword(e.target.value)}
+          <input type="password" required id='userPassword' placeholder='Enter User Password '
+            onChange={(e) => setUpdateUserPassword(e.target.value)} 
           />
           <h3>{isFetching && "Please Wait ..."}</h3>
           <h3>{success && "Profile Update Successfully"}</h3>

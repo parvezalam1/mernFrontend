@@ -9,10 +9,12 @@ export default function Top() {
   const navigate=useNavigate();
   let [searchStatus, setSearchStatus] = useState(null)
   const ulListShow=()=>{
-    document.querySelector('.ulitem').style.display = 'block';
+    document.querySelector('.ulitem').style.right='0vw'
+    document.querySelector('.fa-bars').style.cssText=`visibility:hidden;`;
   }
   const ulListHide=()=>{
-    document.querySelector('.ulitem').style.display = 'none';
+    document.querySelector('.ulitem').style.right='-100vw'
+    document.querySelector('.fa-bars').style.cssText=`visibility:visible;`;
   }
   const logoutHandler = () => {
     dispatch({ type: "LOGOUT" })
@@ -43,7 +45,7 @@ export default function Top() {
         <div className="topcenter">
         
 
-          <ul className="ulitem">
+          <ul className="ulitem ullist-items">
           <i class="fa fa-times" aria-hidden="true" onClick={ulListHide}></i>
             <li><Link className='link' to='/'>Home</Link></li>
             <li><Link className='link' to='/about'>About</Link></li>
@@ -56,8 +58,14 @@ export default function Top() {
           {
             searchStatus && <input type='search' placeholder='Search Post Here' id='search' onKeyUp={itemsSearchHandler}></input>
           }
+        {
+          user && 
+            <>
+
           <i className="fa-solid fa-magnifying-glass topsearch" onClick={searchHandler}></i>
           <i class="fa-brands fa-searchengin " onClick={searchBackHandler}></i>
+            </>
+        }
           {
             user ? <>   <Link to='/settings'>< img src={FP + user.profilePic} alt="" className='topimage' /></Link>
 

@@ -4,7 +4,7 @@
 }
 body::-webkit-scrollbar{
     width: 10px;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 body::-webkit-scrollbar-thumb{
     width: 5px;
@@ -14,13 +14,13 @@ body::-webkit-scrollbar-thumb{
 .header{
     position: relative;
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     padding: 3px 0px;
 }
 .top{
     width: 100%;
     height: 70px;
-    background-color:rgb(85, 56, 70);
+    background-color:rgba(70, 68, 69, 0.507);
     display: flex;
     padding: 20px;
     align-items: center;
@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb{
     top: 0px;
     z-index: 777;
     font-family: 'Lora', serif;
-    color: #fff;
+    /* color: #fff; */
 }
 .topleft,.topright{
     flex:3;
@@ -49,15 +49,18 @@ body::-webkit-scrollbar-thumb{
     list-style: none;
     font-size: 20px;
     font-weight: 200;
-    color: white;
     margin-left: 15px;
-    background-color: darkgray;
+    background-color: rgb(241, 236, 236);
     cursor: pointer;
-    padding: 7px;
+    padding: 2px 7px;
     border-radius: 20px;
     font-family: 'Lora', serif;
 }
 
+.ulitem .link{
+    font-weight: 900;
+    color: black;
+}
 .topcenter .ulitem li .link{
     text-decoration: none;
     padding: 7px;
@@ -85,15 +88,16 @@ body::-webkit-scrollbar-thumb{
     list-style: none;
     margin-right: 20px;
     margin-top: 15px;
-  
+    font-size: 20px;
 }
 .topright .ulitem li .link{
-    padding: 5px;
-    text-decoration: none;
-    border: 1.5px solid #222;
-      
-    background-color: black;
-    color: #fff;
+
+    padding: 5px 10px;
+    text-decoration: none;  
+    background-color: rgba(113, 178, 187, 0.651);
+    color: #2b2a2cfa;
+    font-weight: bold;
+    border-radius: 10px;
 }
 .topright img{
     width: 50px;
@@ -108,6 +112,7 @@ body::-webkit-scrollbar-thumb{
     cursor: pointer;
     order: 1;
 }
+
 .fa-searchengin{
     display: none;
 }
@@ -161,13 +166,15 @@ input[type='search']:focus{
     .topcenter .ulitem{
         height: 100vh;
         position: absolute;
-        top: -20px;
-        right: 0px;
+        top: 55px;
+        right: -100vw;
+        transition: all 0.5s;
         /* width: 300px; */
-        display: none;
-        width: 50%;
+        /* display: none; */
+        /* width: 50%; */
         flex-direction: column;
-        background-color: #c59393;
+        /* background: linear-gradient(lime,#fff,#111,#e77e32); */
+        background-color: #1a1b1bf1;
     }
     .ulitem i{
         position:absolute;
@@ -181,11 +188,16 @@ input[type='search']:focus{
         position: relative;
         top: 25px;
         left: -30px;
-        border-bottom: 1px solid white;
-        border-radius: 0px;
-        margin-top: 7px;
-        color:white;
-        background-color: rgb(136, 199, 160);
+        margin-top:10px;
+        background-color: transparent;
+    }
+   .topcenter .ulitem .link{
+        display: inline-block;
+        text-align: center;
+        width: 200px;
+        color: white;
+        border-radius: 2px;
+        background-color: rgb(85, 87, 87);
     }
     .topright{
         flex: none;

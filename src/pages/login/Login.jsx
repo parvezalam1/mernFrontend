@@ -19,9 +19,11 @@ const loginHandler=async(e)=>{
       let res=await axios.post('https://mernbackend-h4ns.onrender.com/mernBackend/auth/login',{
         username:userRef.current.value,
         password:passwordRef.current.value
+       
       });
+      // console.log('response',res)
       setUp('')
-      console.log(res.data)
+      // console.log(res.data)
       setSuccess(true);
       setTimeout(()=>{
 
@@ -47,7 +49,7 @@ const loginHandler=async(e)=>{
         />
         <button className="loginBtn" type='submit' disabled={isFetching}>Login</button>
         {successs && <h3 
-        style={{color:"white",padding:"3px",backgroundColor:"black",textAlign:"center",width:"100%",marginTop:"5px"}}>
+        style={{color:"white",padding:"3px",backgroundColor:"",textAlign:"center",width:"100%",marginTop:"5px"}}>
           Login Success</h3>}
         {emptyInputError && <span style={{color:"darkblue"}}>All fields Required</span>}
         {setUp && <span>{up}</span>}

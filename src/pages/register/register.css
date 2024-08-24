@@ -6,28 +6,33 @@ margin-top: 0px;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-background: linear-gradient(rgba(255,255,255,0.5),
+/* background: linear-gradient(rgba(255,255,255,0.5),
 rgba(255,255,255,0.5)),
-url('https://media.istockphoto.com/id/1426988809/photo/security-password-login-online-concept-hands-typing-and-entering-username-and-password-of.webp?b=1&s=170667a&w=0&k=20&c=AJD5Wv30lmyILccJyMpQGhkmh0VhZ5WNDtk53MO1OVM=');
+url('https://media.istockphoto.com/id/1426988809/photo/security-password-login-online-concept-hands-typing-and-entering-username-and-password-of.webp?b=1&s=170667a&w=0&k=20&c=AJD5Wv30lmyILccJyMpQGhkmh0VhZ5WNDtk53MO1OVM='); */
 
 background-size:cover;
 }
 .register .loginAccount{
     position: absolute;
-    top: 70px;
+    top: 90px;
     right: 30px;
     width: 100px;
     border-radius: 10px;
-    background-color:springgreen;
+    border: none;
+    background-color:rgba(0, 255, 128, 0.575);
+    padding: 2px 5px;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight:900;
+}
+.register .link{
     color:black;
-    padding: 5px;
-   font-size: 22px;
-cursor: pointer;
+
 }
 .registerForm{
     width: 30%;
-background-color: rgba(0,0,0,0.5);
-height: 250px;
+background-color: rgba(0, 0, 0, 0.267);
+min-height: 250px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -38,9 +43,9 @@ padding: 20px;
 .registerForm .formTitle{
     font-size: 30px;
     padding: 10px;
-    font-weight: 500px;
-    color: darkgrey;
-    text-shadow: 1px 1px 1px red,
+    font-weight: 500;
+    color: rgb(51, 47, 47);
+    text-shadow: 1px 1px 1px cadetblue,
     -1px -1px white;
 }
 .registerForm input{
@@ -52,18 +57,23 @@ padding: 20px;
     text-align: center;
     padding: 3px;
     font-size: 20px;
-
+    border: none;
+}
+.registerForm input:focus{
+    outline: none;
 }
 .registerForm button{
     width: 120px;
     height: 35px;
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 22px;
     border-radius: 10px;
     font-weight: 700px;
-    color: white;
-    background-color: black;
+    color: black;
+    font-weight: 900;
+    background-color: rgba(126, 172, 214, 0.911);
     cursor: pointer;
+    border: none;
 }
 
 /* media query */
@@ -72,5 +82,8 @@ padding: 20px;
         width: 95%;
     border-radius: 5px;
 
+    }
+    .registerForm .formTitle{
+        font-size: 22px;
     }
 }

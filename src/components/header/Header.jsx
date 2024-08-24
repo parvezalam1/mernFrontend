@@ -13,7 +13,8 @@ export default function Header() {
       </div>
 
       <div className="blogimage">
-        <img src="https://cdn.pixabay.com/photo/2017/05/30/03/58/blog-2355684_640.jpg" alt="" />
+        
+        <img src="https://cdn.pixabay.com/photo/2020/11/18/10/40/laptop-5754927_1280.jpg" alt="" />
       </div>
 
     </div>

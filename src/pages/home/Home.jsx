@@ -72,7 +72,7 @@ let tempArray=[];
           <ul id='pageUl'>
             
             {tempArray.map(i =>
-              <li>{i}</li>
+              <li key={i.id}>{i}</li>
 
             )}
           </ul>

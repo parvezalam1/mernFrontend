@@ -16,11 +16,17 @@ let  formHandler =async(e)=> {
   if (username!=='' && password!=='' && email!=='') {
     setError(false) 
   try{
-      let res=await axios.post('https://mernbackend-h4ns.onrender.com/auth/register',{
+      // let res=await axios.post('/auth/register',{
+      //   username,
+      //   password,
+      //   email
+      // })
+      let res=await axios.post('https://mernbackend-h4ns.onrender.com/mernBackend/auth/register',{
         username,
         password,
         email
       })
+      // console.log('response',res)
       res && window.location.replace('/login');
       setSuccess(true)
   }catch(err){
@@ -37,9 +43,9 @@ setError(true)
   }
   return (
     <div className='register'>
-        <button className='loginAccount'><Link to='/login' className='link' style={{color:"white"}}>Login</Link></button>
+        <button className='loginAccount'><Link to='/login' className='link'>Login</Link></button>
       <form action="" className="registerForm" onSubmit={formHandler}>
-      <div className="formTitle">SingUp Your Account</div>
+      <div className="formTitle">Create An Account</div>
         <input type="text" placeholder='Enter New UserName'
         onChange={(e)=>setUsername(e.target.value)}
         />
@@ -52,7 +58,7 @@ setError(true)
         <button className="registerBtn" type='submit' >SingUp</button>
       {checkFieldValue && <span style={{color:"wheat",marginTop:"10px"}}>All Fields Required</span>}
       {error && <span style={{color:"wheat",marginTop:"10px"}}>Something Went Wrong</span>}
-      {success && <span style={{color:"wheat",marginTop:"10px"}}> User Registration Successfull</span>}
+      {success && <span style={{color:"black",marginTop:"10px"}}> Account Created Successfully</span>}
       </form>
     </div>
   )
