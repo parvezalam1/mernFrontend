@@ -25,21 +25,30 @@ useEffect(()=>{
   }
   getPost()
 },[path])
-let imagePath="https://mernbackend-h4ns.onrender.com/images/";
-if(getPost.username===user.username){
-  imagePath+=getPost.photo
-} 
+// let imagePath="https://mernbackend-h4ns.onrender.com/images/";
+// if(getPost.username===user.username){
+//   imagePath+=getPost.photo
+// } 
 const singlePostDelHandler=async(delId)=>{
   if(window.confirm("do you want to delete this post YES / NO")){
   setDeleteStatus(true)
-try{
-  await axios.delete(`https://mernbackend-h4ns.onrender.com/mernBackend/posts/${delId}`,{data:{username:user.username}});
-  setDeleteStatus(false)
-  alert('user post has been deleted successfully')
-  setTimeout(()=>{
-
-    window.location.replace('/');
-  },1500)
+  try{
+    // let res=await axios.delete(`/posts/${delId}`,{username:user.username});
+    // console.log(res)
+    let res=await axios.delete(`https://mernbackend-h4ns.onrender.com/mernBackend/posts/${delId}`,{username:user.username})
+  if(res.data===1){
+  
+    setDeleteStatus(false)
+    alert('user post has been deleted successfully')
+    setTimeout(()=>{
+  
+      window.location.replace('/');
+    },1500)
+  }else if(res.data===2){
+    alert("Something went wrong! please Check.")
+  }else{
+    alert("Warning! You can delete only your post.")
+  }
 }catch(err){
   console.log(err.name)
 }
@@ -101,7 +110,7 @@ const updatePostSumbit=async(e)=>{
   return (
     <div className='singlePost'>
      
-    <img className='postImage' src={imagePath} alt="" />
+    {/* <img className='postImage' src={imagePath} alt="" /> */}
       
    <div className="actionPost">
    <i className="fa fa-pencil-square pencil" aria-hidden="true"  onClick={updatePostHandler}></i>

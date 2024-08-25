@@ -37,7 +37,7 @@ let {user}=useContext(Context)
                try{
                 setRequestStatus(true)
            let res= await axios.post('https://mernbackend-h4ns.onrender.com/mernBackend/posts',newPost)
-           console.log(res.data)
+        //    console.log(res.data)
            if(res.data==='title_match'){
             setPostUpload(false)
             titleMatch(true)

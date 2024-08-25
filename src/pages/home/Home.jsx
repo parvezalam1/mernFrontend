@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import Sidebar from '../../components/sidebar/Sidebar';
 import './home.css';
 import axios from 'axios'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useMemo } from 'react';
 // import {BASE_URL} from '../../config';
 export default function Home() {
@@ -47,19 +47,22 @@ let tempArray=[];
     }
     fetchPosts();
     
-  }, [location.state, offset]);
-  let i=1;
-  while( temp>=i) {
-    tempArray.push(i)
-   i++;
- }
- console.log('temparray',tempArray)
-  let allList = document.querySelectorAll('#pageUl li');
-  allList.forEach((item) => {
-    item.addEventListener('click', () => {
-      setOffset(item.innerHTML - 1)
+
+  }, [location.state, offset,temp]);
+    let i=1;
+    while( temp>=i) {
+      tempArray.push(i)
+     i++;
+   }
+   console.log('temparray',tempArray)
+    let allList = document.querySelectorAll('#pageUl li');
+    allList.forEach((item) => {
+      console.log(item)
+      item.addEventListener('click', () => {
+        setOffset(item.innerHTML - 1)
+      })
     })
-  })
+
   return (
     <>
       {location.state === null ? <Header /> : null}
